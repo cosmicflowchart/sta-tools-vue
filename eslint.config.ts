@@ -1,10 +1,10 @@
-import { globalIgnores } from 'eslint/config'
-import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
-import pluginVue from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
-import pluginPlaywright from 'eslint-plugin-playwright'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+import { globalIgnores } from 'eslint/config'
 import importPlugin from 'eslint-plugin-import'
+import pluginPlaywright from 'eslint-plugin-playwright'
+import pluginVue from 'eslint-plugin-vue'
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
@@ -55,7 +55,14 @@ export default defineConfigWithVueTs(
     },
   },
   {
-    files: ['**/*.ts'],
+    settings: {
+      'import/resolver': {
+        typescript: {},
+      },
+    },
+  },
+  {
+    files: ['**/*.ts', '**/*.vue'],
     extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
     rules: {
       'import/order': [
