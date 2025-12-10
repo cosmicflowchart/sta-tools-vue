@@ -18,6 +18,8 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
     "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },

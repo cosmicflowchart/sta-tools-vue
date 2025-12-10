@@ -1,11 +1,21 @@
-import { describe, it, expect } from 'vitest'
-
 import { mount } from '@vue/test-utils'
 import ProbabilityGraph from '@/components/ProbabilityGraph.vue'
 
+import { describe, expect, it } from 'vitest'
 describe('ProbabilityGraph', () => {
-  it('renders properly', () => {
-    const wrapper = mount(ProbabilityGraph, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+  it('renders properly (with focus)', () => {
+    const wrapper = mount(ProbabilityGraph, {
+      props: { attribute: 10, department: 5, focus: true },
+    })
+    expect(wrapper.text()).toContain('Target Number: 15')
+    expect(wrapper.text()).toContain('Critical Success Range: 5')
+  })
+
+  it('renders properly (without focus)', () => {
+    const wrapper = mount(ProbabilityGraph, {
+      props: { attribute: 10, department: 5, focus: false },
+    })
+    expect(wrapper.text()).toContain('Target Number: 15')
+    expect(wrapper.text()).toContain('Critical Success Range: 1')
   })
 })
