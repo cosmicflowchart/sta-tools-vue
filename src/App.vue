@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useTitle } from '@vueuse/core'
+
+useTitle('STA Calculator')
 </script>
 
 <template>
