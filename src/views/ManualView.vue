@@ -9,7 +9,7 @@ const focus = ref(false)
 </script>
 
 <template>
-  <div>
+  <div class="manual-view">
     <div class="inputs">
       <div>
         <label for="attribute">Attribute</label>
@@ -30,6 +30,10 @@ const focus = ref(false)
 </template>
 
 <style scoped>
+.manual-view {
+  width: 100%;
+}
+
 hr {
   margin: 1rem 0;
 }
