@@ -57,7 +57,10 @@ export default defineConfigWithVueTs(
   {
     settings: {
       'import/resolver': {
-        typescript: {},
+        alias: {
+          map: [['@', './src']],
+          extensions: ['.ts', '.d.ts', 'vue'],
+        },
       },
     },
   },

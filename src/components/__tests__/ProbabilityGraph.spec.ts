@@ -1,7 +1,8 @@
 import { mount } from '@vue/test-utils'
+import { describe, expect, it } from 'vitest'
+
 import ProbabilityGraph from '@/components/ProbabilityGraph.vue'
 
-import { describe, expect, it } from 'vitest'
 describe('ProbabilityGraph', () => {
   it('renders properly (with focus)', () => {
     const wrapper = mount(ProbabilityGraph, {
