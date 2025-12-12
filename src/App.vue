@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <h1>Star Trek Adventures</h1>
-    <h2>Task Probability Calculator</h2>
+    <h2>Task Success Probability Calculator</h2>
     <nav>
       <RouterLink to="/">Manual Values</RouterLink>
       <RouterLink to="/character">Character</RouterLink>

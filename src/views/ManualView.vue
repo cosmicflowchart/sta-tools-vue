@@ -9,7 +9,7 @@ const focus = ref(false)
 </script>
 
 <template>
-  <div>
+  <div class="manual-view">
     <div class="inputs">
       <div>
         <label for="attribute">Attribute</label>
@@ -21,7 +21,7 @@ const focus = ref(false)
       </div>
       <div>
         <label for="focus">Apply Focus</label>
-        <input type="checkbox" v-model="focus" />
+        <input :disabled="department == 1" type="checkbox" v-model="focus" />
       </div>
     </div>
     <hr />
@@ -30,6 +30,10 @@ const focus = ref(false)
 </template>
 
 <style scoped>
+.manual-view {
+  width: 100%;
+}
+
 hr {
   margin: 1rem 0;
 }
