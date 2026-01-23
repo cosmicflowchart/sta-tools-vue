@@ -15,6 +15,11 @@ const router = createRouter({
       name: 'character',
       component: () => import('@/views/CharacterView.vue'),
     },
+    {
+      path: '/stardate',
+      name: 'stardate',
+      component: () => import('@/views/StardateView.vue'),
+    },
   ],
 })
 

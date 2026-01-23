@@ -40,12 +40,21 @@ hr {
 
 .inputs > div {
   display: flex;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
   column-gap: 1rem;
+  margin-bottom: 0.25rem;
+  min-height: 2rem;
+}
+
+.inputs label {
+  margin-left: auto;
+  text-align: right;
+  width: 6rem;
 }
 
 .inputs input {
-  margin-left: auto;
-  width: 3rem;
+  margin-right: auto;
+  width: 4rem;
 }
 </style>

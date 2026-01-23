@@ -7,11 +7,10 @@ useTitle('STA Calculator')
 
 <template>
   <header>
-    <h1>Star Trek Adventures</h1>
-    <h2>Task Success Probability Calculator</h2>
+    <h1>Star Trek Adventures Tools</h1>
     <nav>
       <RouterLink to="/">Manual Values</RouterLink>
-      <RouterLink to="/character">Character</RouterLink>
+      <RouterLink to="/stardate">Stardate</RouterLink>
     </nav>
   </header>
 

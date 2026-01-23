@@ -17,3 +17,12 @@ a,
     background-color: hsla(200, 100%, 50%, 0.2);
   }
 }
+
+input {
+  background: var(--color-background-soft);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  border-style: none;
+}
