@@ -42,16 +42,20 @@ const tableRows = computed(() => {
     <p>Critical Success Range: {{ criticalRange }}</p>
   </div>
   <table>
-    <tr>
-      <th />
-      <th v-for="i in 5" :key="i">{{ i }} {{ i > 1 ? 'Dice' : 'Die' }}</th>
-    </tr>
-    <tr v-for="(row, rowIndex) in tableRows" :key="rowIndex">
-      <td>{{ rowIndex + 1 }}+</td>
-      <td v-for="(probability, colIndex) in row" :key="colIndex">
-        {{ probability }}
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th />
+        <th v-for="i in 5" :key="i">{{ i }} {{ i > 1 ? 'Dice' : 'Die' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="(row, rowIndex) in tableRows" :key="rowIndex">
+        <td>{{ rowIndex + 1 }}+</td>
+        <td v-for="(probability, colIndex) in row" :key="colIndex">
+          {{ probability }}
+        </td>
+      </tr>
+    </tbody>
   </table>
 </template>
 
